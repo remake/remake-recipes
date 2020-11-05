@@ -198,6 +198,9 @@
     <div>
       <h1>Remake Recipes 🌈</h1>
       <h2>Explore what Remake can do with these simple recipes</h2>
+      <h3 style="margin-top: 3rem;">
+        <div style="color: #868e96;">This page shows off Remake's new syntax, which is coming out soon.</div>
+        <div style="margin-top: .5rem; font-size: 24px;"><a style="color:#5c7cfa;" href="https://new-syntax.remaketheweb.com/">Sign up to get it early.</a></div></h3>
     </div>
     <div>
       <h3>With Remake, HTML gets super powers</h3>
@@ -1144,6 +1147,26 @@ text note</textarea>
 
     processPage();
 
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/polite-email-popup@0.9.3/dist/polite-email-popup.umd.js"></script>
+  <script>
+    PoliteEmailPopup.contentWebsite({
+      beSlightlyMoreAggressive: true,
+      imageSrc: "https://remake.b-cdn.net/logos/remake-icon-with-padding.svg",
+      headingText: "Get early access to the new Remake!",
+      descriptionText: "A simpler version of Remake is coming soon. Sign up to get it early.",
+      mainButtonText: "Sign up",
+      successMessage: "Thank you for signing up!",
+      failureMessage: "Sorry, sign up failed...",
+      convertKitConfig: {
+        formAction: "https://app.convertkit.com/forms/1794928/subscriptions"
+      },
+      onSubmit: function ({event, email, success}) {
+        // Add any custom code here, like a Google Analytics event
+        // that you want to trigger every time a user submits their email
+      }
+    });
   </script>
 </body>
 </html>
