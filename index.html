@@ -97,11 +97,12 @@
     article > section {
       width: 40%;
       padding: 1rem;
-      border: 8px solid #ddd;
+      border: 8px solid #eebefa;
     }
 
     article > section:first-child {
       width: 60%;
+      border: 8px solid #c3d3fd;
     }
 
     article > section > aside {
@@ -204,6 +205,25 @@
     /* attribute on an element*/
     pre .attribute {
       color: #972bb3;
+    }
+
+    @media (max-width: 980px) {
+      article {
+        display: block;
+        margin-bottom: 4rem;
+      }
+
+      article > section:first-child, article > section {
+        width: 100%;
+      }
+
+      .arrow {
+        width: 48px;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+        transform: rotate(90deg);
+      }
     }
   </style>
 </head>
@@ -1165,8 +1185,8 @@ text note</textarea>
     PoliteEmailPopup.contentWebsite({
       beSlightlyMoreAggressive: true,
       imageSrc: "https://remake.b-cdn.net/logos/remake-icon-with-padding.svg",
-      headingText: "Get early access to the new Remake!",
-      descriptionText: "A simpler version of Remake is coming soon. Sign up to get it early.",
+      headingText: "Let's hack web development together!",
+      descriptionText: "Join us as we build an internet that's easier to build on.",
       mainButtonText: "Sign up",
       successMessage: "Thank you for signing up!",
       failureMessage: "Sorry, sign up failed...",
